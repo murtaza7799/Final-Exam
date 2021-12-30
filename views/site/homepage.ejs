@@ -1,0 +1,48 @@
+<div><%-include("./slider.ejs") %> </div>
+<div class="container marketing">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+    <div class="col-lg-4">
+      <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/images/uploaded/<%=products[1].image  %>"  preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></img>
+
+      <h2><%=products[1].name  %> </h2>
+      <p><%=products[1].discription  %></p>
+      <h4>Price : <%=products[1].price %></h4> 
+      <p><a class="btn btn-secondary" href="/add-cart/<%=products[1]._id %>">Add to Cart</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/images/uploaded/<%=products[2].image  %>"  preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></img>
+
+      <h2><%=products[2].name  %></h2>
+      <p><%=products[2].discription  %></p>
+      <h4>Price : <%=products[2].price %></h4> 
+      <p><a class="btn btn-secondary" href="/add-cart/<%=products[2]._id %>">Add to cart</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/images/uploaded/<%=products[3].image  %>"  preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></img>
+
+      <h2><%=products[3].name  %></h2>
+      <p><%=products[3].discription  %></p>
+      <h4>Price : <%=products[3].price %></h4> 
+      <p><a class="btn btn-secondary" href="/add-cart/<%=products[3]._id %>">Add to cart</a></p>
+    </div><!-- /.col-lg-4 -->
+  </div>
+  <!-- /.row -->
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading"><%=products[4].name  %> <span class="text-muted"></span></h2>
+      <p class="lead"><%=products[4].discription  %></p>
+    </div>
+    <div class="col-md-5">
+      <img src="/images/uploaded/<%=products[4].image  %>" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="./images/uploaded/tech1.jpg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></img>
+
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+
+

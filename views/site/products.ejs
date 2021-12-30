@@ -1,0 +1,62 @@
+<section class="py-5 text-center container">
+          <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+              <h1 class="fw-light">All products</h1>
+              <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+              <p>
+              </p>
+            </div>
+          </div>
+        </section>
+       
+
+        
+  <div class="container">
+    <div class="row">
+        <% for (var i = 0; i < products.length; i++) { %>
+          <div class="container">
+            <div class="card" style="width: 23rem; text-align:center;display:inline-block;">
+              <img class="card-img-top" src="/images/uploaded/<%=products[i].image %>" alt="Card image cap" height="200" width="200" style="border-radius:.60rem;">
+              
+              <div class="card-block">
+                <h4 class="card-title"><%- products[i].name %> </h4>
+                <p class="card-text">Price : <%-products[i].price  %> PKR </p>
+                <p class="card-text"><%-products[i].discription %> </p>%> </p>
+                <a href="/add-cart/<%=products[i]._id %>" class="btn btn-primary">Add to Cart</a>
+                <hr/>
+              </div>
+            </div>
+    </div>
+        <% } %>
+    </div>
+        <% if (pages > 0) { %>
+            <ul class="pagination text-center">
+                <% if (current == 1) { %>
+                    <li class="disabled btn btn-primary"><a>First</a></li>
+                <% } else { %>
+                    <li class="btn btn-primary"><a href="/products/1">First</a></li>
+                <% } %>
+                <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+                <% if (i !== 1) { %>
+                    <li class="disabled"><a>...</a></li>
+                <% } %>
+                <% for (; i <= (Number(current) + 4) && i <= pages; i++) { %>
+                    <% if (i == current) { %>
+                        <li class="active btn btn-primary"><a><%= i %></a></li>
+                    <% } else { %>
+                        <li><a href="/products/<%= i %>"><%= i %></a></li>
+                    <% } %>
+                    <% if (i == Number(current) + 4 && i < pages) { %>
+                        <li class="disabled"><a>...</a></li>
+                    <% } %>
+                <% } %>
+                <% if (current == pages) { %>
+                    <li class="disabled btn btn-primary"><a>Last</a></li>
+                <% } else { %>
+                    <li class="btn btn-primary"><a class="btn" href="/products/<%= pages %>">Last</a></li>
+                <% } %>
+            </ul>
+        <% } %>
+</div>
+
+
